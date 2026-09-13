@@ -1,235 +1,37 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Chuda</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta viewport="width=device-width, initial-scale=1.0">
+<title>แฟมสะสมงานของฉัน ชุดา สุวรัตน์ </title>
+<style>
+body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
+padding: 30px; }
+.container { max-width: 800px; margin: 0 auto; }
+.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
+8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
+.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
+20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+</style>
 </head>
-
 <body>
-
-    <div class="portfolio">
-
-        <!-- เมนูด้านบน -->
-        <nav>
-            <a href="index.html">หน้าแรก</a>
-            <a href="#cover">หน้าปก</a>
-            <a href="#profile">ประวัติส่วนตัว</a>
-            <a href="#education">การศึกษา</a>
-            <a href="#interest">ความสนใจ</a>
-            <a href="#activity">กิจกรรม</a>
-        </nav>
-
-
-        <!-- 1. หน้าปก -->
-        <section id="cover" class="cover section">
-
-            <div class="cover-text">
-                <p class="small-title">MY PORTFOLIO</p>
-
-                <h1>แฟ้มสะสมงาน</h1>
-
-                <h2>CHUDA SUWARAT</h2>
-
-                <p>คณะมนุษยศาสตร์และสังคมศาสตร์</p>
-                <p>สาขาภาษาจีน</p>
-
-                <p class="school">
-                    มหาวิทยาลัยบูรพา
-                </p>
-            </div>
-
-            <div class="cover-image">
-                <img src="images/cover.jpg" alt="รูปหน้าปก">
-            </div>
-
-        </section>
-
-
-        <!-- 2. ประวัติส่วนตัว -->
-        <section id="profile" class="section">
-
-            <h2 class="section-title">ประวัติส่วนตัว</h2>
-
-            <div class="profile-box">
-
-                <div class="profile-photo">
-                    <img src="images/cover.jpg" alt="รูปโปรไฟล์">
-                </div>
-
-                <div class="profile-info">
-
-                    <p><b>ชื่อ:</b> ชฎา สุวรัตน์</p>
-
-                    <p><b>ชื่อเล่น:</b> ฝน</p>
-
-                    <p><b>อายุ:</b> 17 ปี</p>
-
-                    <p><b>งานอดิเรก:</b> ดูซีรีส์จีน ฟังเพลง</p>
-
-                    <p><b>ความสามารถพิเศษ:</b>
-                        การเรียนรู้ภาษาจีน
-                    </p>
-
-                    <p><b>คติประจำใจ:</b>
-                        ความพยายามไม่เคยทรยศใคร
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 3. ประวัติการศึกษา -->
-        <section id="education" class="section">
-
-            <h2 class="section-title">ประวัติการศึกษา</h2>
-
-            <div class="education-card">
-
-                <div class="edu-item">
-                    <h3>ระดับประถมศึกษา</h3>
-                    <p>โรงเรียน ................................</p>
-                    <p>พ.ศ. .................</p>
-                </div>
-
-                <div class="edu-item">
-                    <h3>ระดับมัธยมศึกษาตอนต้น</h3>
-                    <p>โรงเรียน ................................</p>
-                    <p>พ.ศ. .................</p>
-                </div>
-
-                <div class="edu-item">
-                    <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
-                    <p>โรงเรียน ................................</p>
-                    <p>แผนการเรียน ................................</p>
-                    <p>พ.ศ. .................</p>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 4. ความสนใจในการศึกษาต่อ -->
-        <section id="interest" class="section">
-
-            <h2 class="section-title">
-                ความสนใจในการศึกษาต่อ
-            </h2>
-
-            <div class="interest-box">
-
-                <img src="images/study.jpg"
-                     alt="มหาวิทยาลัยที่สนใจ">
-
-                <div>
-
-                    <h3>มหาวิทยาลัยบูรพา</h3>
-
-                    <h4>คณะมนุษยศาสตร์และสังคมศาสตร์</h4>
-
-                    <h4>สาขาภาษาจีน</h4>
-
-                    <p>
-                        ข้าพเจ้ามีความสนใจศึกษาต่อในสาขาภาษาจีน
-                        เนื่องจากชื่นชอบภาษาจีนและวัฒนธรรมจีน
-                        ต้องการพัฒนาทักษะการฟัง พูด อ่าน และเขียน
-                        เพื่อนำความรู้ไปใช้ในการศึกษาต่อและการทำงาน
-                        ในอนาคต
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- 5. กิจกรรม -->
-        <section id="activity" class="section">
-
-            <h2 class="section-title">กิจกรรม</h2>
-
-            <div class="activity-grid">
-
-                <div class="activity-card">
-
-                    <img src="images/activity1.jpg"
-                         alt="กิจกรรมที่ 1">
-
-                    <h3>กิจกรรมที่ 1</h3>
-
-                    <p>
-                        ชื่อกิจกรรม ................................
-                    </p>
-
-                    <p>
-                        รายละเอียดกิจกรรม ................................
-                    </p>
-
-                </div>
-
-
-                <div class="activity-card">
-
-                    <img src="images/activity2.jpg"
-                         alt="กิจกรรมที่ 2">
-
-                    <h3>กิจกรรมที่ 2</h3>
-
-                    <p>
-                        ชื่อกิจกรรม ................................
-                    </p>
-
-                    <p>
-                        รายละเอียดกิจกรรม ................................
-                    </p>
-
-                </div>
-
-
-                <div class="activity-card">
-
-                    <img src="images/activity3.jpg"
-                         alt="กิจกรรมที่ 3">
-
-                    <h3>กิจกรรมที่ 3</h3>
-
-                    <p>
-                        ชื่อกิจกรรม ................................
-                    </p>
-
-                    <p>
-                        รายละเอียดกิจกรรม ................................
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ปุ่มกลับหน้าแรกตอนจบ -->
-        <div class="back-home">
-
-            <a href="index.html" class="main-button">
-                🏠 กลับไปหน้าแรก
-            </a>
-
-        </div>
-
-
-        <footer>
-            © 2026 My Portfolio
-        </footer>
-
-    </div>
-
+<div class="container">
+<h1> แฟมสะสมงาน ชุดา สุวรัตน์ (Portfolio)</h1>
+<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจค่ะ</p>
+<!-- กล่องผลงานชิ้นที่  1 -->
+<div class="project-card">
+<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ  </h3>
+<p>รายละเอียดชิ้นงาน  : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+</div>
+<!-- กล่องผลงานชิ้นที่  2 -->
+<div class="project-card">
+<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
+<p>รายละเอียดชิ้นงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
+</div>
+<!-- ปุ่มกดกลับหน้าแรก -->
+<a href="index.html" class="btn"> กลับหน้าแรก</a>
+<a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
+                                          
+</div>
 </body>
 </html>
