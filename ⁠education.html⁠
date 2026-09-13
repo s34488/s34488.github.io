@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ประวัติการศึกษา - แฟ้มสะสมผลงาน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">หน้าปก</a>
+        <a href="preface.html">คำนำ</a>
+        <a href="education.html">ประวัติการศึกษา</a>
+        <a href="activities.html">กิจกรรม</a>
+    </nav>
+
+    <div class="container">
+        <h1>ประวัติการศึกษา</h1>
+        
+        <ul style="list-style-type: none; padding: 0; margin-top: 20px;">
+            <li style="margin-bottom: 25px; border-left: 4px solid #3498db; padding-left: 15px;">
+                <h3>ระดับมัธยมศึกษาตอนปลาย</h3>
+                <p>โรงเรียน [ชื่อโรงเรียน]</p>
+                <p>แผนการเรียน: [สายการเรียน เช่น วิทย์-คณิต]</p>
+                <p>เกรดเฉลี่ยสะสม (GPAX): X.XX</p>
+            </li>
+            
+            <li style="margin-bottom: 25px; border-left: 4px solid #3498db; padding-left: 15px;">
+                <h3>ระดับมัธยมศึกษาตอนต้น</h3>
+                <p>โรงเรียน [ชื่อโรงเรียน]</p>
+                <p>เกรดเฉลี่ยสะสม (GPAX): X.XX</p>
+            </li>
+            
+            <li style="margin-bottom: 25px; border-left: 4px solid #3498db; padding-left: 15px;">
+                <h3>ระดับประถมศึกษา</h3>
+                <p>โรงเรียน [ชื่อโรงเรียน]</p>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>
