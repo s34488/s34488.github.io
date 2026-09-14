@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    background: linear-gradient(
+        135deg,
+        #dff2ff,
+        #f5eaff
+    );
+    color: #444;
+    min-height: 100vh;
+}
+
+/* หน้าแรก */
+.home {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    padding: 60px 25px;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px #b9d5eb;
+}
+
+.star {
+    font-size: 55px;
+    color: #64b5f6;
+}
+
+.home-card h1 {
+    color: #458dcc;
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.home-card p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.welcome {
+    font-size: 16px !important;
+    color: #888;
+    margin-top: 25px;
+}
+
+/* ปุ่ม */
+.main-button,
+.back-button {
+    display: inline-block;
+    text-decoration: none;
+    background: #62b5ee;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.main-button:hover,
+.back-button:hover {
+    background: #368fd1;
+}
+
+/* เว็บไซต์ */
+.portfolio {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+/* หน้ารวมเมนู */
+.menu-page {
+    text-align: center;
+    padding: 50px 25px;
+}
+
+.menu-page h1 {
+    color: #438fc9;
+    margin-bottom: 15px;
+}
+
+.menu-page > p {
+    color: #888;
+    font-size: 20px;
+    margin-bottom: 35px;
+}
+
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+}
+
+.menu-list a {
+    background: #e8f5ff;
+    color: #347db5;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.menu-list a:hover {
+    background: #bce3fc;
+}
+
+/* หน้าหัวข้อ */
+.page {
+    text-align: center;
+    padding: 60px 8%;
+    min-height: 600px;
+}
+
+.page h1 {
+    color: #438fc9;
+    font-size: 32px;
+    margin-bottom: 35px;
+}
+
+.page h2 {
+    color: #438fc9;
+    margin: 20px 0;
+}
+
+.page h3 {
+    color: #666;
+    margin: 12px 0;
+}
+
+.page p {
+    font-size: 18px;
+    line-height: 1.9;
+    margin: 12px 0;
+}
+
+/* รูปภาพ */
+.cover-img {
+    width: 100%;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 25px;
+    margin: 10px auto 25px;
+}
+
+/* กล่องการศึกษา */
+.info-card {
+    background: #f0f8ff;
+    padding: 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+/* กิจกรรม */
+.activity-card {
+    background: #f0f8ff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+
+.activity-card img {
+    width: 100%;
+    max-width: 500px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* โทรศัพท์ */
+@media (max-width: 768px) {
+    .portfolio {
+        margin: 10px;
+    }
+
+    .home-card h1 {
+        font-size: 27px;
+    }
+
+    .page {
+        padding: 40px 6%;
+    }
+
+    .page h1 {
+        font-size: 27px;
+    }
+}
