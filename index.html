@@ -1,141 +1,104 @@
 <!DOCTYPE html>
 <html lang="th">
-<style>
-
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: "Tahoma", sans-serif;
-        background: #f5fffb;
-        color: #333;
-    }
-
-    /* แถบเมนู */
-    nav {
-        background: white;
-        padding: 18px 7%;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    /* โลโก้ */
-    .logo {
-        font-size: 21px;
-        font-weight: bold;
-        color: #b72c2c;
-    }
-
-    /* เมนู */
-    .menu {
-        display: flex;
-        gap: 20px;
-        list-style: none;
-    }
-
-    .menu a {
-        text-decoration: none;
-        color: #555;
-        font-size: 15px;
-    }
-
-    .menu a:hover {
-        color: #c62828;
-    }
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Portfolio 🇨🇳</title>
+    <title>ยินดีต้อนรับสู่ Portfolio ของฉัน 🏮</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- ฟอนต์ภาษาไทยและอังกฤษเรียบหรู -->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;600&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
 </head>
-
 <body>
 
-    <!-- <!-- แถบเมนูด้านบน -->
-<nav>
-<!-- หน้าแรก -->
-<section id="home" class="home">
+    <!-- โคมไฟประดับด้านบน -->
+    <div class="lantern-container">
+        <span class="lantern">🏮</span>
+        <span class="lantern">🏮</span>
+    </div>
 
-    <!-- ของตกแต่งจีน -->
-    <div class="lantern left">🏮</div>
-    <div class="lantern right">🏮</div>
+    <!-- ส่วนหัว / เมนูหลัก (Navigation Bar) -->
+    <header id="top">
+        <nav class="navbar">
+            <div class="logo">🧧 Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#about">ประวัติส่วนตัว</a></li>
+                <li><a href="#education">ประวัติการศึกษา</a></li>
+                <li><a href="#interests">ความสนใจในการศึกษาต่อ</a></li>
+                <li><a href="#activities">กิจกรรม</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <div class="home-content">
-
-        <!-- ข้อความ -->
-        <div class="welcome-text">
-
-            <p class="hello">
-                ✨ 你好！Nǐ hǎo! ✨
-            </p>
-
-            <h1>
-                ยินดีต้อนรับสู่<br>
-                เว็บไซต์ Portfolio ของฉัน 💗
-            </h1>
-
-            <h2>
-                欢迎来到我的个人作品集 🇨🇳
-            </h2>
-
-            <p>
-                เรามาทำความรู้จักกันให้มากขึ้นกันเถอะ! 🌸
-            </p>
-
+    <!-- ส่วนต้อนรับ (Hero Section) -->
+    <section class="hero">
+        <div class="profile-frame">
+            <!-- ใส่ลิงก์หรือรูปภาพของคุณที่นี่ -->
+            <img src="https://via.placeholder.com/180" alt="รูปโปรไฟล์" class="profile-img">
         </div>
+        <h1>✨ 欢 迎 (ยินดีต้อนรับ) ✨</h1>
+        <h2>ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</h2>
+        <p class="subtitle">🧧 ขอให้การเดินทางชมผลงานนี้เต็มไปด้วยโชคลาภและความสุข 🐉</p>
+    </section>
 
-        <!-- รูปโปรไฟล์ -->
-        <div class="profile">
+    <div class="container">
+        
+        <!-- ประวัติส่วนตัว -->
+        <section id="about" class="card">
+            <h2>📜 ประวัติส่วนตัว (Personal Info)</h2>
+            <div class="content">
+                <p><strong>ชื่อ-นามสกุล:</strong> [ใส่ชื่อ-นามสกุลของคุณ]</p>
+                <p><strong>ชื่อเล่น:</strong> [ใส่ชื่อเล่น]</p>
+                <p><strong>วันเกิด:</strong> [ใส่วัน/เดือน/ปีเกิด]</p>
+                <p><strong>คติประจำใจ:</strong> 千里之行，始於足下 (การเดินทางไกลพันลี้ เริ่มต้นที่ก้าวแรก)</p>
+                <p><strong>ช่องทางการติดต่อ:</strong> Email: example@email.com | Tel: 08X-XXX-XXXX</p>
+            </div>
+            <a href="#top" class="back-to-top">⬆️ กลับไปหน้าแรก</a>
+        </section>
 
-            <img src="profile.jpg" alt="รูปโปรไฟล์ของฉัน">
+        <!-- ประวัติการศึกษา -->
+        <section id="education" class="card">
+            <h2>🎓 ประวัติการศึกษา (Education)</h2>
+            <div class="content">
+                <ul>
+                    <li><strong>ระดับมัธยมศึกษาตอนปลาย:</strong> โรงเรียน [ใส่ชื่อโรงเรียน] (แผนการเรียน [ใส่สายการเรียน])</li>
+                    <li><strong>ระดับมัธยมศึกษาตอนต้น:</strong> โรงเรียน [ใส่ชื่อโรงเรียน]</li>
+                </ul>
+            </div>
+            <a href="#top" class="back-to-top">⬆️ กลับไปหน้าแรก</a>
+        </section>
 
-            <p>👩🏻‍🎓 My Profile</p>
+        <!-- ความสนใจในการศึกษาต่อ -->
+        <section id="interests" class="card">
+            <h2>🎯 ความสนใจในการศึกษาต่อ (Future Goals)</h2>
+            <div class="content">
+                <p><strong>คณะ/สาขาที่สนใจ:</strong> [ใส่คณะหรือสาขาวิชาที่อยากเข้าศึกษา]</p>
+                <p><strong>เหตุผลความสนใจ:</strong> [อธิบายความสนใจ Passion หรือเป้าหมายในอนาคตของคุณ]</p>
+            </div>
+            <a href="#top" class="back-to-top">⬆️ กลับไปหน้าแรก</a>
+        </section>
 
-        </div>
+        <!-- กิจกรรม -->
+        <section id="activities" class="card">
+            <h2>🎨 กิจกรรมที่เคยเข้าร่วม (Activities)</h2>
+            <div class="content">
+                <div class="activity-item">
+                    <h3>🎋 กิจกรรมที่ 1: [ชื่อกิจกรรม/การแข่งขัน]</h3>
+                    <p>[รายละเอียดกิจกรรมสั้นๆ เช่น ได้รับรางวัล หรือทำหน้าที่อะไร]</p>
+                </div>
+                <div class="activity-item">
+                    <h3>🐉 กิจกรรมที่ 2: [ชื่อกิจกรรม/งานจิตอาสา]</h3>
+                    <p>[รายละเอียดกิจกรรมสั้นๆ]</p>
+                </div>
+            </div>
+            <a href="#top" class="back-to-top">⬆️ กลับไปหน้าแรก</a>
+        </section>
 
     </div>
 
-    <div class="logo">
-        🏮 My Portfolio 🇨🇳
-    </div>
-
-    <ul class="menu">
-
-        <li>
-            <a href="#home">🏠 หน้าแรก</a>
-        </li>
-
-        <li>
-            <a href="#personal">👩🏻‍🎓 ประวัติส่วนตัว</a>
-        </li>
-
-        <li>
-            <a href="#education">📚 ประวัติการศึกษา</a>
-        </li>
-
-        <li>
-            <a href="#interest">🎓 ความสนใจในการศึกษาต่อ</a>
-        </li>
-
-        <li>
-            <a href="#activities">🌸 กิจกรรม</a>
-        </li>
-
-    </ul>
-
-</nav> -->
+    <!-- ส่วนท้าย (Footer) -->
+    <footer>
+        <p>🐉 Designed with Luck & Success | Created for GitHub Portfolio 🧧</p>
+    </footer>
 
 </body>
-
 </html>
