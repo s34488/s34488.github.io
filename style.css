@@ -1,12 +1,11 @@
-/* การกำหนดค่าเริ่มต้นและโทนสี */
 :root {
-    --primary-red: #8B0000;      /* สีแดงเข้มมงคล */
-    --bright-red: #D2143A;       /* สีแดงสว่าง */
-    --gold: #FFD700;             /* สีทอง */
-    --dark-gold: #C5A059;        /* สีทองเข้ม */
-    --black: #121212;            /* สีดำ */
-    --card-bg: #1A1A1A;          /* สีดำพื้นหลังการ์ด */
-    --white: #FFFFFF;            /* สีขาว */
+    --primary-red: #8B0000;
+    --bright-red: #D2143A;
+    --gold: #FFD700;
+    --dark-gold: #C5A059;
+    --black: #121212;
+    --card-bg: #1A1A1A;
+    --white: #FFFFFF;
     --text-gray: #E0E0E0;
 }
 
@@ -24,7 +23,7 @@ body {
     line-height: 1.6;
 }
 
-/* โคมไฟประดับลอยด้านบน */
+/* โคมไฟประดับ */
 .lantern-container {
     position: absolute;
     top: 10px;
@@ -37,54 +36,12 @@ body {
     z-index: 10;
 }
 
-/* Navigation Bar */
-header {
-    background-color: rgba(139, 0, 0, 0.95);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 2px solid var(--gold);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px 20px;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--gold);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: var(--white);
-    text-decoration: none;
-    font-weight: 400;
-    transition: color 0.3s;
-}
-
-.nav-links a:hover {
-    color: var(--gold);
-}
-
-/* Hero Section (ต้อนรับ & โปรไฟล์) */
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 60px 20px 40px;
+    padding: 50px 20px 30px;
     background: linear-gradient(180deg, var(--primary-red) 0%, var(--black) 100%);
-    border-bottom: 1px solid var(--dark-gold);
+    border-bottom: 2px solid var(--dark-gold);
 }
 
 .profile-frame {
@@ -97,8 +54,8 @@ header {
 }
 
 .profile-img {
-    width: 180px;
-    height: 180px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--black);
@@ -112,7 +69,7 @@ header {
 }
 
 .hero h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--white);
     font-weight: 400;
 }
@@ -123,61 +80,122 @@ header {
     font-size: 1rem;
 }
 
-/* Layout และ การ์ดเนื้อหา */
+/* Layout หลัก */
 .container {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 850px;
+    margin: 30px auto;
     padding: 0 20px;
 }
 
-.card {
+/* Accordion */
+.accordion-item {
     background-color: var(--card-bg);
     border: 1px solid var(--dark-gold);
-    border-left: 5px solid var(--bright-red);
     border-radius: 8px;
-    padding: 30px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-}
-
-.card h2 {
-    color: var(--gold);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    font-size: 1.4rem;
-}
-
-.content p, .content li {
-    color: var(--text-gray);
-    margin-bottom: 10px;
-}
-
-.content ul {
-    padding-left: 20px;
-}
-
-.activity-item {
     margin-bottom: 15px;
-    padding-left: 10px;
-    border-left: 2px solid var(--gold);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
-.activity-item h3 {
+.accordion-header {
+    width: 100%;
+    background-color: var(--card-bg);
+    color: var(--gold);
+    padding: 18px 20px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Sarabun', sans-serif;
+}
+
+.accordion-header:hover, .accordion-header.active {
+    background-color: var(--primary-red);
     color: var(--white);
-    font-size: 1.1rem;
 }
 
-/* ปุ่มกลับขึ้นไปหน้าแรก */
+.accordion-header .icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .icon {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #141414;
+}
+
+.inner-content {
+    padding: 25px;
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    color: var(--text-gray);
+}
+
+/* การจัดระเบียบเนื้อหาภายใน */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 215, 0, 0.2);
+    margin: 20px 0;
+}
+
+.section-subtitle {
+    color: var(--gold);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.timeline-item, .activity-card {
+    background-color: rgba(255, 255, 255, 0.03);
+    border-left: 3px solid var(--gold);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 0 5px 5px 0;
+}
+
+.timeline-item h3, .activity-card h3 {
+    color: var(--gold);
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.reason-box {
+    background-color: rgba(139, 0, 0, 0.2);
+    border: 1px solid var(--bright-red);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+/* ปุ่มกลับไปหน้าแรก */
 .back-to-top {
     display: inline-block;
     margin-top: 15px;
     color: var(--gold);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     border: 1px solid var(--gold);
-    padding: 5px 12px;
-    border-radius: 20px;
+    padding: 5px 14px;
+    border-radius: 15px;
     transition: all 0.3s;
 }
 
@@ -193,22 +211,6 @@ footer {
     background-color: #0a0a0a;
     color: var(--dark-gold);
     border-top: 1px solid rgba(255, 215, 0, 0.2);
-    font-size: 0.9rem;
-}
-
-/* รองรับการแสดงผลหน้าจอมือถือ */
-@media (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-links {
-        gap: 10px;
-        font-size: 0.9rem;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+    font-size: 0.85rem;
+    margin-top: 50px;
 }
