@@ -1,0 +1,349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Tahoma", sans-serif;
+    color: #553b30;
+    background: #dcecf4;
+}
+
+/* พื้นหลังจีน */
+.chinese-page {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 90%,
+            #b8dce9 0,
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 90% 20%,
+            #f9e3dc 0,
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #f8f5e9,
+            #d8edf5
+        );
+
+    border: 10px solid #e2bd72;
+    outline: 2px solid #b98636;
+}
+
+/* ลายกรอบจีน */
+.chinese-page::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 2px solid #d4a652;
+    pointer-events: none;
+}
+
+/* โคมไฟด้านบน */
+.lantern-top {
+    text-align: center;
+    font-size: 45px;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* เมฆจีน */
+.cloud {
+    position: absolute;
+    color: #8bbbd0;
+    font-size: 90px;
+    opacity: 0.45;
+}
+
+.cloud1 {
+    left: 20px;
+    bottom: 40px;
+}
+
+.cloud2 {
+    right: 20px;
+    top: 120px;
+}
+
+/* หน้าแรก */
+.home-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-content {
+    text-align: center;
+    margin-top: 30px;
+    padding: 30px;
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+}
+
+.fu {
+    width: 85px;
+    height: 85px;
+    background: #b93636;
+    color: #ffe5a4;
+    border: 4px solid #d9ad55;
+    transform: rotate(45deg);
+    margin: 10px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+}
+
+.fu::first-letter {
+    transform: rotate(-45deg);
+}
+
+.english-title {
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: #6c4b36;
+    font-weight: bold;
+}
+
+.home-content h1 {
+    color: #8b302f;
+    font-size: 32px;
+    margin: 25px 0;
+}
+
+.home-content h2 {
+    color: #bd3838;
+    font-size: 30px;
+    margin: 20px;
+}
+
+.gold-line {
+    color: #bd8a37;
+    font-size: 25px;
+    margin: 18px 0;
+}
+
+.chinese-text {
+    font-size: 25px;
+    color: #bd3838;
+    margin: 15px;
+}
+
+.plum-blossom {
+    position: absolute;
+    bottom: 25px;
+    left: 30px;
+    color: #c95757;
+    font-size: 50px;
+}
+
+/* เนื้อหาแต่ละหน้า */
+.page-content {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 8%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.page-content h1 {
+    font-size: 36px;
+    color: #a73535;
+    margin-bottom: 10px;
+}
+
+.page-content h2 {
+    color: #b33c38;
+    margin: 18px 0;
+}
+
+.page-content h3 {
+    color: #725444;
+    margin: 12px 0;
+}
+
+.page-content p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 12px 0;
+}
+
+/* รูปหน้าปก */
+.cover-photo {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    max-height: 500px;
+    object-fit: cover;
+    margin: 25px auto;
+    border: 8px solid #d8ad5c;
+    outline: 2px solid #a97932;
+    border-radius: 5px;
+}
+
+/* คำจีน */
+.chinese-quote {
+    color: #bd3838 !important;
+    font-size: 30px !important;
+    font-weight: bold;
+    margin-top: 25px !important;
+}
+
+/* กล่องข้อมูล */
+.info-box {
+    background: rgba(255, 250, 240, 0.9);
+    border: 2px solid #d6ae63;
+    outline: 1px solid #ecd49b;
+    border-radius: 5px;
+    padding: 25px;
+    margin: 22px 0;
+    text-align: left;
+    position: relative;
+}
+
+.info-box::before {
+    content: "✿";
+    position: absolute;
+    top: 5px;
+    left: 12px;
+    color: #c44c4c;
+    font-size: 22px;
+}
+
+.info-box::after {
+    content: "✿";
+    position: absolute;
+    bottom: 5px;
+    right: 12px;
+    color: #d4a652;
+    font-size: 22px;
+}
+
+/* รูปมหาวิทยาลัย */
+.study-photo {
+    width: 100%;
+    max-width: 650px;
+    max-height: 380px;
+    object-fit: cover;
+    border: 7px solid #d6ae63;
+    margin: 25px auto;
+}
+
+/* กิจกรรม */
+.activity-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.activity-card {
+    background: #fffaf0;
+    border: 2px solid #d6ae63;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border: 3px solid #d6ae63;
+}
+
+.activity-card h2 {
+    font-size: 20px;
+}
+
+.activity-card p {
+    font-size: 15px;
+}
+
+/* ปุ่มแดงทอง */
+.red-button {
+    display: inline-block;
+    background: linear-gradient(
+        135deg,
+        #b83232,
+        #d45b43
+    );
+    color: #fff7dd;
+    text-decoration: none;
+    padding: 14px 25px;
+    border: 2px solid #e1bb67;
+    border-radius: 7px;
+    font-weight: bold;
+    font-size: 16px;
+    box-shadow: 0 3px 0 #8c2929;
+    transition: 0.3s;
+}
+
+.red-button:hover {
+    background: #8f2626;
+    transform: translateY(-2px);
+}
+
+.page-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* โทรศัพท์ */
+@media (max-width: 768px) {
+
+    .chinese-page {
+        border-width: 5px;
+    }
+
+    .lantern-top {
+        font-size: 32px;
+    }
+
+    .english-title {
+        font-size: 28px;
+    }
+
+    .home-content h1 {
+        font-size: 26px;
+    }
+
+    .page-content {
+        padding: 25px 7%;
+    }
+
+    .page-content h1 {
+        font-size: 28px;
+    }
+
+    .activity-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .activity-card img {
+        height: 230px;
+    }
+
+    .page-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .red-button {
+        text-align: center;
+    }
+
+}
